@@ -158,8 +158,11 @@ yum -y install cmake bison-devel ncurses-devel libaio-devel
 ```
 ## 获取mysql软件包
 ```
-http://repo.mysql.com/yum/mysql-5.6-community/el/6/x86_64/mysql-community-server-5.6.36-2.el6.x86_64.rpm
-wget https://downloads.mysql.com/archives/get/file/mysql-5.6.36.tar.gz
+http://repo.mysql.com/yum/mysql-5.7-community/el/7/x86_64/mysql-community-release-el7-7.noarch.rpm
+http://repo.mysql.com/yum/mysql-5.7-community/el/7/x86_64/mysql-community-server-5.7.20-1.el7.x86_64.rpm
+
+https://downloads.mysql.com/archives/get/file/mysql-5.7.20-linux-glibc2.12-x86_64.tar.gz
+https://downloads.mysql.com/archives/get/file/mysql-5.7.20.tar.gz
 ```
 ## 配置编译选项
 https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html
@@ -288,7 +291,7 @@ make && make install
 c++: internal compiler error: Killed (program cc1plus) Please submit a full bug report
 ## 授权
 ```
-chown -R mysql.mysql /application/mysql-5.7.17
+chown -R mysql.mysql /usr/local/mysql-5.7.20
 ```
 ## 初始化
 ```
