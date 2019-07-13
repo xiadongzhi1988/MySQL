@@ -13,7 +13,7 @@ yum install bison-devel ncurses-devel libaio-devel
 # 2.添加mysql环境变量
 
 ```bash
-vim /etc/profile.d/mysql.sh 
+vim /etc/profile.d/mysql.sh
 export PATH=/usr/local/mysql/bin:$PATH
 ```
 
@@ -38,7 +38,7 @@ mysqld --initialize-insecure --user=mysql --basedir=/usr/local/mysql --datadir=/
 # 6.systemd管理MySQL
 
 ```vim
-vim /etc/systemd/system/mysqld.service 
+vim /etc/systemd/system/mysqld.service
 [Unit]
 Description=MySQL Server
 Documentation=man:mysqld(8)
@@ -70,7 +70,10 @@ vim /etc/my.cnf
 basedir=/usr/local/mysql
 datadir=/usr/local/mysql/data
 user=mysql
+server_id=5106
 log-error=/usr/local/mysql/data/error.log
+skip_name_resolve
+port=3306
 ```
 
 # 9.启动MySQL
